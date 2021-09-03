@@ -1,20 +1,20 @@
-# Dracula for [X](http://link-to-x.com)
+# Dracula for [Pantheon Terminal](https://elementary.io)
 
-> A dark theme for [X](http://link-to-x.com).
+> A dark theme for [Pantheon Terminal](https://elementary.io).
 
 ![Screenshot](./screenshot.png)
 
 ## Install
 
-All instructions can be found at [draculatheme.com/x](https://draculatheme.com/x).
+All instructions can be found at [draculatheme.com/pantheon-terminal](https://draculatheme.com/pantheon-terminal).
 
 ## Team
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/template/graphs/contributors).
+This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/pantheon-terminal/graphs/contributors).
 
-[![Zeno Rocha](https://github.com/zenorocha.png?size=100)](https://github.com/zenorocha) |
+[![Mike Goggin](https://github.com/mgoggin.png?size=100)](https://github.com/mgoggin) |
 --- |
-[Zeno Rocha](https://github.com/zenorocha) |
+[Mike Goggin](https://github.com/mgoggin) |
 
 ## License
 
