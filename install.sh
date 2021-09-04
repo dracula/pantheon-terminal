@@ -20,7 +20,11 @@ reset_color_scheme() {
 }
 
 usage() {
-    printf -- "Usage goes here\n"
+    printf -- "Usage: install.sh [-?hq] [--help] [--quiet] [--uninstall] \n\n"
+    printf -- "Options\n"
+    printf -- "  -?, -h, --help         Show this information.\n"
+    printf -- "  -q, --quiet            Suppress messages and assume YES on all prompts.\n"
+    printf -- "  --uninstall            Uninstalls the color scheme.\n\n"
 }
 
 while [ $# -gt 0 ]; do
