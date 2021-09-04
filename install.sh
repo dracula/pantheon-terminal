@@ -27,6 +27,41 @@ usage() {
     printf -- "  --uninstall            Uninstalls the color scheme.\n\n"
 }
 
+install_confirm() {
+    local confirmation
+
+    printf -- "Pantheon Terminal does not support multiple profiles or more than one hard-\n"
+    printf -- "coded color scheme.\n\n"
+    printf -- "This install script will overwrite the default color palette for Pantheon\n"
+    printf -- "Terminal.\n\n"
+    printf -- "You may uninstall this color scheme at any time by executing this script\n"
+    printf -- "with the --uninstall flag.\n\n"
+    printf -- "Do you wish to proceed? (type YES to proceed): "
+
+    read -r confirmation
+    if [[ $(echo "$confirmation" | tr '[:lower:]' '[:upper:]') != YES ]]; then
+        printf -- "ERROR: Confirmation failed -- ABORTING!\n"
+        exit 1
+    fi
+}
+
+uninstall_confirm() {
+    local confirmation
+
+    printf -- "You have chosen to uninstall this color scheme and restore the default\n"
+    printf -- "palette in Pantheon Terminal.\n\n"
+    printf -- "You may reinstall this color scheme at any time by executing this script\n"
+    printf -- "again WITHOUT the --uninstall flag.\n\n"
+    printf -- "We're sad to see you go!\n\n"
+    printf -- "Do you wish to proceed? (type YES to proceed): "
+
+    read -r confirmation
+    if [[ $(echo "$confirmation" | tr '[:lower:]' '[:upper:]') != YES ]]; then
+        printf -- "ERROR: Confirmation failed -- ABORTING!\n"
+        exit 1
+    fi
+}
+
 while [ $# -gt 0 ]; do
     case $1 in
     -h | --help | '-?')
@@ -34,6 +69,7 @@ while [ $# -gt 0 ]; do
         exit 0
         ;;
     --uninstall)
+        [[ "$BE_QUIET" == '0' ]] && uninstall_confirm
         reset_color_scheme
         exit 0
         ;;
@@ -44,5 +80,6 @@ while [ $# -gt 0 ]; do
     shift
 done
 
+[[ "$BE_QUIET" == '0' ]] && install_confirm
 set_color_scheme
 exit 0
