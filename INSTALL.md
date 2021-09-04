@@ -1,17 +1,34 @@
 ### [Pantheon Terminal](https://elementary.io)
 
-#### Install using Git
+#### Prerequisites
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+You'll need the `dconf` command to install the theme. If you're using elementary OS (or another Debian-based distro), you can install it by running:
 
-    $ git clone https://github.com/dracula/pantheon-terminal.git
+    $ sudo apt install dconf-cli
 
-#### Install manually
+#### Install
 
-Download using the [GitHub .zip download](https://github.com/dracula/pantheon-terminal/archive/master.zip) option and unzip them.
+After cloning this repo, or downloading and extracting a ZIP archive of the code from GitHub, change into the project directory and run the install script.
 
-#### Activating theme
+    $ cd pantheon-terminal
+    $ ./install.sh
 
-1. Do this
-2. Then that
-3. Boom! It's working
+The changes should take affect immediately in the terminal window.
+
+##### Silent Installs
+
+The install script supports a quiet option that suppresses all info messages and prompts.
+
+    $ ./install.sh --quiet
+    # OR
+    $ ./install.sh -q
+
+#### Uninstall
+
+To uninstall the theme, just use the `--uninstall` flag. You can also use `--quiet` to uninstall without info messages or prompts.
+
+    $ ./install.sh --uninstall
+    # Shhhh...
+    $ ./install.sh --uninstall --quiet
+
+The changes should take affect immediately in the terminal window.
