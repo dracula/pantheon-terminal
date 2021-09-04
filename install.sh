@@ -10,6 +10,11 @@ set_color_scheme() {
     dconf write "$SCHEMA/foreground" "'$(cat "$COLOR_DIR"/foreground)'"
     dconf write "$SCHEMA/background" "'$(cat "$COLOR_DIR"/background)'"
     dconf write "$SCHEMA/prefer-dark-style" "true"
+
+    if [[ "$BE_QUIET" == '0' ]]; then
+        printf -- "\n"
+        printf -- "Dracula for Pantheon Terminal has been installed! :D\n"
+    fi
 }
 
 reset_color_scheme() {
@@ -17,6 +22,11 @@ reset_color_scheme() {
     dconf reset "$SCHEMA/foreground"
     dconf reset "$SCHEMA/background"
     dconf reset "$SCHEMA/prefer-dark-style"
+
+    if [[ "$BE_QUIET" == '0' ]]; then
+        printf -- "\n"
+        printf -- "Dracula for Pantheon Terminal has been uninstalled. :(\n"
+    fi
 }
 
 usage() {
