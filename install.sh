@@ -9,14 +9,14 @@ set_color_scheme() {
     dconf write "$SCHEMA/palette" "'$(cat "$COLOR_DIR"/palette)'"
     dconf write "$SCHEMA/foreground" "'$(cat "$COLOR_DIR"/foreground)'"
     dconf write "$SCHEMA/background" "'$(cat "$COLOR_DIR"/background)'"
-    dconf write "$SCHEMA/prefer-dark-mode" "true"
+    dconf write "$SCHEMA/prefer-dark-style" "true"
 }
 
 reset_color_scheme() {
     dconf reset "$SCHEMA/palette"
     dconf reset "$SCHEMA/foreground"
     dconf reset "$SCHEMA/background"
-    dconf reset "$SCHEMA/prefer-dark-mode"
+    dconf reset "$SCHEMA/prefer-dark-style"
 }
 
 usage() {
