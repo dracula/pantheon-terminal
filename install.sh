@@ -92,4 +92,5 @@ done
 
 [[ "$BE_QUIET" == '0' ]] && install_confirm
 set_color_scheme
+
 exit 0
